@@ -1,0 +1,45 @@
+{
+  "$schema": "https://cli.sasjs.io/sasjsconfig-schema.json",
+  "macroFolders": [
+    "sasjs/macros"
+  ],
+  "programFolders": [],
+  "serviceConfig": {
+    "serviceFolders": [
+      "sasjs/services/common",
+      "sasjs/services/files"
+    ],
+    "initProgram": "sasjs/services/serviceinit.sas"
+  },
+  "defaultTarget": "viya",
+  "targets": [
+    {
+      "name": "viya",
+      "serverUrl": "",
+      "serverType": "SASVIYA",
+      "appLoc": "/Public/app/angular-seed-app",
+      "contextName": "SAS Job Execution compute context"
+    },
+    {
+      "name": "sas9",
+      "serverUrl": "",
+      "serverType": "SAS9",
+      "appLoc": "/Public/app/angular-seed-app",
+      "serverName": "SASApp",
+      "repositoryName": "Foundation"
+    },
+    {
+      "name": "server",
+      "serverUrl": "",
+      "serverType": "SASJS",
+      "appLoc": "/Public/app/angular-seed-app",
+      "streamConfig": {
+        "streamLogo": "assets/angular-logo.png",
+        "streamServiceName": "Angular",
+        "streamWeb": true,
+        "streamWebFolder": "web",
+        "webSourcePath": "dist"
+      }
+    }
+  ]
+}
